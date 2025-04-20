@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./javascript.js" defer></script>
+</head>
+<body>
+    <div class="books-container" id="booksContainer"></div>
+    <button id="addBookButton">Add Book</button>
+    <dialog id="addBookModal">
+        <button id="closeModalButton">Close</button>
+        <form id="addBookForm" action="#">
+            <p>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="book-title" required>
+            </p>
+            <p>
+                <label for="author">Author</label>
+                <input type="text" id="author" name="book-author" required>
+            </p>
+            <p>
+                <label for="numPages">Number of Pages</label>
+                <input type="number" id="numPages" name="book-page-count" required>
+            </p>
+            <fieldset>
+                <legend>Have you read this book?</legend>
+                <label for="isRead">
+                    <input type="radio" name="book-read-status" id="isRead" value="Yes" required>
+                    Yes
+                </label>
+                <label for="notRead">
+                    <input type="radio" name="book-read-status" id="notRead" value="No" required>
+                    No
+                </label>
+            </fieldset>
+            <button type="submit">Add</button>
+        </form>
+    </dialog>
+</body>
+</html>
